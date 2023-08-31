@@ -1,6 +1,9 @@
 <script>
+import TheCarousel from "./TheCarousel.vue";
 export default {
-  components: {},
+  components: {
+    TheCarousel,
+  },
   data() {
     return {};
   },
@@ -86,6 +89,7 @@ export default {
       </div>
     </div>
   </nav>
+  <TheCarousel></TheCarousel>
 </template>
 
 <style lang="scss" scoped>
