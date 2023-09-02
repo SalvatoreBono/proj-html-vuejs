@@ -104,7 +104,7 @@ ul li {
 
 .hover-nav {
   position: absolute;
-  opacity: 0;
+  display: none;
   top: 65px;
 }
 
@@ -121,6 +121,6 @@ i {
   height: 30px;
 }
 .dropdown:hover .hover-nav {
-  opacity: 1;
+  display: block;
 }
 </style>

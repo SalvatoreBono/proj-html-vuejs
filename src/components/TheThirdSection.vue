@@ -25,6 +25,17 @@ export default {
           overview: `Cameraman`,
         },
       ],
+      Carousel: [
+        {
+          img: `01.jpg`,
+        },
+        {
+          img: `02.jpg`,
+        },
+        {
+          img: `03.jpg`,
+        },
+      ],
     };
   },
   methods: {},
@@ -59,25 +70,55 @@ export default {
           src="../assets/image (20).svg"
           alt=""
         />
-        <p>
-          Curabitur bindum ex ut sapien blandit viverra. Nunc lobortis mi dui,
-          id Etiam tempor sit amet metus in bibendum. Nunc eros risus,
-          pellentesque a augue pellentesque fringilla eget mi eu mollis.
-          commodo.
-        </p>
-        <div class="d-flex justify-content-center">
-          <div class="me-3">
-            <img class="rounded-circle" src="../assets/01.jpg" alt="" />
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div style="top: 200px" class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
-          <div class="d-flex flex-column text-start">
-            <div class="text-uppercase fw-bold">John doe</div>
-            <div class="small">Designer</div>
+          <div class="carousel-inner">
+            <div
+              v-for="singleCarousel in Carousel"
+              class="carousel-item active"
+            >
+              <p>
+                Curabitur bindum ex ut sapien blandit viverra. Nunc lobortis mi
+                dui, id Etiam tempor sit amet metus in bibendum. Nunc eros
+                risus, pellentesque a augue pellentesque fringilla eget mi eu
+                mollis. commodo.
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="me-3">
+                  <img
+                    class="rounded-circle"
+                    :src="`src/assets/${singleCarousel.img}`"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex flex-column text-start">
+                  <div class="text-uppercase fw-bold">John doe</div>
+                  <div class="small">Designer</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="pt-3">
-          <i class="fa-solid fa-circle fa-2xs"></i>
-          <i class="fa-solid fa-circle fa-2xs"></i>
-          <i class="fa-solid fa-circle fa-2xs"></i>
         </div>
       </div>
     </div>
@@ -113,6 +154,7 @@ img {
 }
 i {
   padding-left: 0.5rem;
+  cursor: pointer;
 }
 .bg-about-us img {
   width: 60px;
