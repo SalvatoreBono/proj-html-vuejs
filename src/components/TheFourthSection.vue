@@ -81,7 +81,7 @@ export default {
         <h6 class="fw-bold text-uppercase">Latest news</h6>
         <h3 class="fw-bold pb-4 pt-3 text-uppercase">articles updated daily</h3>
       </div>
-      <div class="d-flex gap-5 justify-content-between">
+      <div class="d-flex gap-3 justify-content-between">
         <div v-for="singleNews in News" class="structure">
           <div class="animation">
             <img
@@ -126,7 +126,7 @@ export default {
 
 <style lang="scss" scoped>
 .structure {
-  width: calc(100% / 3 - 3rem);
+  width: calc(100% / 3 - 1rem);
 }
 .structure img {
   width: 100%;
