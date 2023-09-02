@@ -25,7 +25,7 @@ export default {
           overview: ` Design is our playground. While we create an awesome experience, we
             like having fun. No animals`,
         },
-        {
+        /*         {
           img: `blog03.jpg`,
           date: ` April 10 , 2022 By Admin`,
           title: `last video website you need for`,
@@ -48,7 +48,7 @@ export default {
           date: ` December 07 , 2021 By Admin`,
           title: `cadenze rios picked for the next picture`,
           overview: ` inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do`,
-        },
+        }, */
       ],
       Logos: [
         {
