@@ -71,11 +71,12 @@ export default {
           alt=""
         />
         <div id="carouselExampleCaptions" class="carousel slide">
-          <div style="top: 200px" class="carousel-indicators">
+          <div style="top: 170px" class="carousel-indicators">
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="0"
+              style="width: 10px; height: 10px; border-radius: 50%"
               class="active"
               aria-current="true"
               aria-label="Slide 1"
@@ -83,12 +84,15 @@ export default {
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
+              style="width: 10px; height: 10px; border-radius: 50%"
+              class="me-2 ms-2"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
+              style="width: 10px; height: 10px; border-radius: 50%"
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
@@ -158,5 +162,10 @@ i {
 }
 .bg-about-us img {
   width: 60px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
 }
 </style>
