@@ -86,9 +86,11 @@ export default {
   width: calc(100% / 3 - 2rem);
   padding-bottom: 3rem;
 }
+.structure img {
+  transition: 0.5s;
+}
 .structure:hover img {
   transform: translateY(-8px);
-  transition: 0.5s;
 }
 .structure img {
   width: 80px;

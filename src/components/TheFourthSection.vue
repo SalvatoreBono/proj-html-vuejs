@@ -59,11 +59,13 @@ export default {
       </div>
       <div class="row justify-content-between">
         <div v-for="singleNews in News" class="structure">
-          <img
-            class="latest-news"
-            :src="`src/assets/${singleNews.img}`"
-            alt=""
-          />
+          <div class="animation">
+            <img
+              class="latest-news"
+              :src="`src/assets/${singleNews.img}`"
+              alt=""
+            />
+          </div>
           <div class="pt-3 pb-3 text-secondary small">
             {{ singleNews.date }}
           </div>
@@ -105,9 +107,15 @@ export default {
 .structure img {
   width: 100%;
 }
+
+.latest-news {
+  transition: 0.5s;
+}
+.animation {
+  overflow: hidden;
+}
 .latest-news:hover {
   transform: scale(1.05);
-  transition: 0.5s;
 }
 .btn-carousel {
   position: absolute;

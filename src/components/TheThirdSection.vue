@@ -40,7 +40,9 @@ export default {
     </div>
     <div class="d-flex flex-wrap text-center gap-4">
       <div v-for="SingleTeam in Team" class="stucture-width-4">
-        <img :src="`src/assets/${SingleTeam.img}`" alt="" />
+        <div class="animation">
+          <img :src="`src/assets/${SingleTeam.img}`" alt="" />
+        </div>
         <h4 class="fw-bold pt-4 pb-2 text-uppercase">{{ SingleTeam.title }}</h4>
         <p class="text-secondary">{{ SingleTeam.overview }}</p>
       </div>
@@ -86,9 +88,18 @@ export default {
 .stucture-width-4 {
   width: calc(100% / 4 - 2rem);
 }
+.stucture-width-4 img {
+  transition: 0.5s;
+}
+.animation {
+  overflow: hidden;
+}
+.structure img {
+  transition: 0.5s;
+}
+
 .stucture-width-4:hover img {
   transform: scale(1.05);
-  transition: 0.5s;
 }
 .bg-about-us {
   background-image: url(../assets/Parallax-02.jpg);

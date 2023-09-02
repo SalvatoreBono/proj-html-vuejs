@@ -55,7 +55,9 @@ export default {
     </div>
     <div class="d-flex flex-wrap text-center gap-3">
       <div v-for="singleWatchlist in Watchlist" class="structure">
-        <img :src="`../src/assets/${singleWatchlist.img}`" alt="" />
+        <div class="animation">
+          <img :src="`../src/assets/${singleWatchlist.img}`" alt="" />
+        </div>
         <h4 class="fw-bold pt-4 pb-2 text-uppercase">
           {{ singleWatchlist.title }}
         </h4>
@@ -97,9 +99,15 @@ export default {
 img {
   width: 100%;
 }
+.animation {
+  overflow: hidden;
+}
+.structure img {
+  transition: 0.5s;
+}
+
 .structure:hover img {
   transform: scale(1.05);
-  transition: 0.5s;
 }
 .bg-counter {
   background-image: url(../assets/Parallax-01.jpg);
