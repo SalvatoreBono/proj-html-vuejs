@@ -25,6 +25,30 @@ export default {
           overview: ` Design is our playground. While we create an awesome experience, we
             like having fun. No animals`,
         },
+        {
+          img: `blog03.jpg`,
+          date: ` April 10 , 2022 By Admin`,
+          title: `last video website you need for`,
+          overview: ` Is as name to here them deny wise this. As rapid woody my he me which. Men but they fail shew just`,
+        },
+        {
+          img: `blog04.jpg`,
+          date: ` March 01 , 2022 By Admin`,
+          title: `Band uprising to cult status`,
+          overview: ` Porta tellus aliquam ligula sollicitudin tindidunt habitant egestas erat lectus congue nisl`,
+        },
+        {
+          img: `blog05.jpg`,
+          date: ` February 14, 2022 By Admin`,
+          title: `Bringing the stage to life`,
+          overview: `Actor The Concept Movie High Concept Theory see the post As Clover Letter  Emails Got`,
+        },
+        {
+          img: `blog06.jpg`,
+          date: ` December 07 , 2021 By Admin`,
+          title: `cadenze rios picked for the next picture`,
+          overview: ` inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do`,
+        },
       ],
       Logos: [
         {
@@ -57,7 +81,7 @@ export default {
         <h6 class="fw-bold text-uppercase">Latest news</h6>
         <h3 class="fw-bold pb-4 pt-3 text-uppercase">articles updated daily</h3>
       </div>
-      <div class="row justify-content-between">
+      <div class="d-flex gap-5 justify-content-between">
         <div v-for="singleNews in News" class="structure">
           <div class="animation">
             <img
@@ -102,7 +126,7 @@ export default {
 
 <style lang="scss" scoped>
 .structure {
-  width: calc(100% / 3);
+  width: calc(100% / 3 - 3rem);
 }
 .structure img {
   width: 100%;
