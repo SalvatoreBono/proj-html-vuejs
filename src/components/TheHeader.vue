@@ -96,6 +96,11 @@ export default {
 ul li {
   font-weight: 700;
 }
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
 
 .hover-nav {
   position: absolute;
