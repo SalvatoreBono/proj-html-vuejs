@@ -99,7 +99,7 @@ ul li {
 .navbar {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .hover-nav {

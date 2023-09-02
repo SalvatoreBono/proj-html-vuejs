@@ -2,7 +2,30 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      Footer: [
+        {
+          title: `information`,
+          credits: [
+            `Product Support`,
+            `Checkout`,
+            `Report Abuse`,
+            `Redeem Voucher`,
+            `Order Status`,
+          ],
+        },
+        {
+          title: `useful links`,
+          credits: [
+            `Policies & Rules`,
+            `Privacy Policy`,
+            `License Policy`,
+            `My Account`,
+            `Locality`,
+          ],
+        },
+      ],
+    };
   },
   methods: {},
   mounted() {},
@@ -42,60 +65,17 @@ export default {
             </li>
           </ul>
         </div>
-        <div class="stucture-width-4">
-          <h5 class="text-uppercase fw-bold pb-3">information</h5>
+        <div v-for="singleFooter in Footer" class="stucture-width-4">
+          <h5 class="text-uppercase fw-bold pb-3">{{ singleFooter.title }}</h5>
           <ul class="list-unstyled">
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >Product Support</a
-              >
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href="">Checkout</a>
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >Report Abuse</a
-              >
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >Redeem Voucher</a
-              >
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >Order Status</a
-              >
+            <li v-for="singleCredits in singleFooter.credits" class="pb-2">
+              <a class="text-footer text-decoration-none" href="">{{
+                singleCredits
+              }}</a>
             </li>
           </ul>
         </div>
-        <div class="stucture-width-4">
-          <h5 class="text-uppercase fw-bold pb-3">useful links</h5>
-          <ul class="list-unstyled">
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >Policies & Rules</a
-              >
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >Privacy Policy</a
-              >
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href=""
-                >License Policy</a
-              >
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href="">My Account</a>
-            </li>
-            <li class="pb-2">
-              <a class="text-footer text-decoration-none" href="">Locality</a>
-            </li>
-          </ul>
-        </div>
+
         <div class="stucture-width-4">
           <h5 class="text-uppercase fw-bold pb-4">newsletter</h5>
           <p style="color: rgb(102, 102, 102)">

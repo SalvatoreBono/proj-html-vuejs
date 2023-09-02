@@ -2,7 +2,30 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      Team: [
+        {
+          img: `Team-01.jpg`,
+          title: `Fabricio guerra`,
+          overview: `Main Director`,
+        },
+        {
+          img: `Team-02.jpg`,
+          title: `umberto pagoda`,
+          overview: `Main Writer`,
+        },
+        {
+          img: `Team-03.jpg`,
+          title: `gloria riccasso`,
+          overview: `Main Producer`,
+        },
+        {
+          img: `Team-04.jpg`,
+          title: `Lio napoin `,
+          overview: `Cameraman`,
+        },
+      ],
+    };
   },
   methods: {},
   mounted() {},
@@ -16,25 +39,10 @@ export default {
       <h2 class="fw-bold text-uppercase">Meet the team</h2>
     </div>
     <div class="d-flex flex-wrap text-center gap-4">
-      <div class="stucture-width-4">
-        <img src="../assets/Team-01.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2 text-uppercase">Fabricio guerra</h4>
-        <p class="text-secondary">Main Director</p>
-      </div>
-      <div class="stucture-width-4">
-        <img src="../assets/Team-02.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2 text-uppercase">umberto pagoda</h4>
-        <p class="text-secondary">Main Writer</p>
-      </div>
-      <div class="stucture-width-4">
-        <img src="../assets/Team-03.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2 text-uppercase">gloria riccasso</h4>
-        <p class="text-secondary">Main Producer</p>
-      </div>
-      <div class="stucture-width-4">
-        <img src="../assets/Team-04.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2 text-uppercase">Lio napoin</h4>
-        <p class="text-secondary">Cameraman</p>
+      <div v-for="SingleTeam in Team" class="stucture-width-4">
+        <img :src="`src/assets/${SingleTeam.img}`" alt="" />
+        <h4 class="fw-bold pt-4 pb-2 text-uppercase">{{ SingleTeam.title }}</h4>
+        <p class="text-secondary">{{ SingleTeam.overview }}</p>
       </div>
     </div>
   </section>

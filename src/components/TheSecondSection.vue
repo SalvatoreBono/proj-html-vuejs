@@ -2,7 +2,45 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      Watchlist: [
+        {
+          img: `Gallery-01.jpg`,
+          title: `Seventeenth Summer`,
+          overview: `Commercial, Music Video. `,
+        },
+        {
+          img: `Gallery-02.jpg`,
+
+          title: `A Message to Space`,
+          overview: `Short Film`,
+        },
+        {
+          img: `Gallery-03.jpg`,
+
+          title: `The most beautiful thing `,
+          overview: `Music Video `,
+        },
+        {
+          img: `Gallery-04.jpg`,
+
+          title: `Permission To Speak `,
+          overview: `Documentary  `,
+        },
+        {
+          img: `Gallery-05.jpg`,
+
+          title: `Explore our space`,
+          overview: `Film noir `,
+        },
+        {
+          img: `Gallery-06.jpg`,
+
+          title: `Film Production `,
+          overview: `Blaxploitation  `,
+        },
+      ],
+    };
   },
   methods: {},
   mounted() {},
@@ -16,35 +54,12 @@ export default {
       <h2 class="fw-bold">BEST HITS MOVIES</h2>
     </div>
     <div class="d-flex flex-wrap text-center gap-3">
-      <div class="structure">
-        <img src="../assets/Gallery-01.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2 text-uppercase">SEVENTEENTH SUMMER</h4>
-        <p class="text-secondary">Commercial, Music Video.</p>
-      </div>
-      <div class="structure">
-        <img src="../assets/Gallery-02.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2">A MESSAGE TO SPACE</h4>
-        <p class="text-secondary">Short Film</p>
-      </div>
-      <div class="structure">
-        <img src="../assets/Gallery-03.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2">THE MOST BEAUTIFUL THING</h4>
-        <p class="text-secondary">Music Video.</p>
-      </div>
-      <div class="structure">
-        <img src="../assets/Gallery-04.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2">PERMISSION TO SPEAK</h4>
-        <p class="text-secondary">Documentary</p>
-      </div>
-      <div class="structure">
-        <img src="../assets/Gallery-05.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2">EXPLORE OUR SPACE</h4>
-        <p class="text-secondary">Film noir</p>
-      </div>
-      <div class="structure">
-        <img src="../assets/Gallery-06.jpg" alt="" />
-        <h4 class="fw-bold pt-4 pb-2">FILM PRODUCTION</h4>
-        <p class="text-secondary">Blaxploitation</p>
+      <div v-for="singleWatchlist in Watchlist" class="structure">
+        <img :src="`../src/assets/${singleWatchlist.img}`" alt="" />
+        <h4 class="fw-bold pt-4 pb-2 text-uppercase">
+          {{ singleWatchlist.title }}
+        </h4>
+        <p class="text-secondary">{{ singleWatchlist.overview }}</p>
       </div>
     </div>
   </section>

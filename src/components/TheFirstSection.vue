@@ -2,7 +2,34 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      peliculaStudios: [
+        {
+          img: `image (14).svg`,
+          title: `ARRAY OF EQUIPMENT`,
+        },
+        {
+          img: `image (16).svg`,
+          title: `NEW TECHNOLOGIES`,
+        },
+        {
+          img: `image (18).svg`,
+          title: `Versitile actors `,
+        },
+        {
+          img: `image (15).svg`,
+          title: `Top Directors `,
+        },
+        {
+          img: `image (17).svg`,
+          title: `Minute Editing `,
+        },
+        {
+          img: `image (19).svg`,
+          title: `Versitile actors `,
+        },
+      ],
+    };
   },
   methods: {},
   mounted() {},
@@ -15,49 +42,11 @@ export default {
       <h6 class="fw-bold">PELICULA STUDIO</h6>
       <h3 class="fw-bold pb-5 pt-3">THIS IS WHAT WE DO</h3>
       <div class="row justify-content-between">
-        <div class="structure">
-          <img src="../assets/image (14).svg" alt="" />
-          <h4 class="fw-bold pt-4 pb-2">ARRAY OF EQUIPMENT</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos,
-            provident recusandae velit
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/image (16).svg" alt="" />
-          <h4 class="fw-bold pt-4 pb-2">NEW TECHNOLOGIES</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos,
-            provident recusandae velit
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/image (18).svg" alt="" />
-          <h4 class="fw-bold pt-4 pb-2">VERSITILE ACTORS</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos,
-            provident recusandae velit
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/image (15).svg" alt="" />
-          <h4 class="fw-bold pt-4 pb-2">TOP DIRECTORS</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos,
-            provident recusandae velit
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/image (17).svg" alt="" />
-          <h4 class="fw-bold pt-4 pb-2">MINUTE EDITING</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos,
-            provident recusandae velit
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/image (19).svg" alt="" />
-          <h4 class="fw-bold pt-4 pb-2">VERSITILE ACTORS</h4>
+        <div v-for="singlePeliculaStudio in peliculaStudios" class="structure">
+          <img :src="`../src/assets/${singlePeliculaStudio.img}`" alt="" />
+          <h4 class="fw-bold pt-4 pb-2 text-uppercase">
+            {{ singlePeliculaStudio.title }}
+          </h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos,
             provident recusandae velit

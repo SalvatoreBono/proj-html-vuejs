@@ -2,7 +2,48 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      News: [
+        {
+          img: `blog07.jpg`,
+          date: ` November 06 , 2021 By Admin`,
+          title: `recap your latest company event`,
+          overview: ` Suspendisse dictum dictum tempor.Ut non faucibus arcu, id elementum
+            est. Suspendisse sed`,
+        },
+        {
+          img: `blog01.jpg`,
+          date: `  May 27 , 2022 By Admin`,
+          title: ` how to edit a film score to serve`,
+          overview: ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
+            placeat sed harum`,
+        },
+        {
+          img: `blog02.jpg`,
+          date: ` May 07 , 2022 By Admin`,
+          title: `are you ready to make it awesome`,
+          overview: ` Design is our playground. While we create an awesome experience, we
+            like having fun. No animals`,
+        },
+      ],
+      Logos: [
+        {
+          img: `03.png`,
+        },
+        {
+          img: `04.png`,
+        },
+        {
+          img: `05.png`,
+        },
+        {
+          img: `01.png`,
+        },
+        {
+          img: `02.png`,
+        },
+      ],
+    };
   },
   methods: {},
   mounted() {},
@@ -17,43 +58,20 @@ export default {
         <h3 class="fw-bold pb-4 pt-3 text-uppercase">articles updated daily</h3>
       </div>
       <div class="row justify-content-between">
-        <div class="structure">
-          <img src="../assets/blog07.jpg" alt="" />
+        <div v-for="singleNews in News" class="structure">
+          <img
+            class="latest-news"
+            :src="`src/assets/${singleNews.img}`"
+            alt=""
+          />
           <div class="pt-3 pb-3 text-secondary small">
-            November 06 , 2021 By Admin
+            {{ singleNews.date }}
           </div>
           <h6 class="fw-bold pb-2 text-uppercase">
-            recap your latest company event
+            {{ singleNews.title }}
           </h6>
           <p class="small">
-            Suspendisse dictum dictum tempor.Ut non faucibus arcu, id elementum
-            est. Suspendisse sed
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/blog01.jpg" alt="" />
-          <div class="pt-3 pb-3 text-secondary small">
-            May 27 , 2022 By Admin
-          </div>
-          <h6 class="fw-bold pb-2 text-uppercase">
-            how to edit a film score to serve
-          </h6>
-          <p class="small">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
-            placeat sed harum
-          </p>
-        </div>
-        <div class="structure">
-          <img src="../assets/blog02.jpg" alt="" />
-          <div class="pt-3 pb-3 text-secondary small">
-            May 07 , 2022 By Admin
-          </div>
-          <h6 class="fw-bold pb-2 text-uppercase">
-            are you ready to make it awesome
-          </h6>
-          <p class="small">
-            Design is our playground. While we create an awesome experience, we
-            like having fun. No animals
+            {{ singleNews.overview }}
           </p>
         </div>
       </div>
@@ -71,20 +89,8 @@ export default {
     <div class="bg-photo d-flex align-items-center">
       <div class="container text-white">
         <div class="d-flex flex-wrap">
-          <div class="stucture-width-5">
-            <img src="../assets/03.png" alt="" />
-          </div>
-          <div class="stucture-width-5">
-            <img src="../assets/04.png" alt="" />
-          </div>
-          <div class="stucture-width-5">
-            <img src="../assets/05.png" alt="" />
-          </div>
-          <div class="stucture-width-5">
-            <img src="../assets/01.png" alt="" />
-          </div>
-          <div class="stucture-width-5">
-            <img src="../assets/02.png" alt="" />
+          <div v-for="SingleLogos in Logos" class="stucture-width-5">
+            <img :src="`src/assets/${SingleLogos.img}`" alt="" />
           </div>
         </div>
       </div>
@@ -99,7 +105,7 @@ export default {
 .structure img {
   width: 100%;
 }
-img:hover {
+.latest-news:hover {
   transform: scale(1.05);
   transition: 0.5s;
 }
