@@ -25,7 +25,7 @@ export default {
           overview: ` Design is our playground. While we create an awesome experience, we
             like having fun. No animals`,
         },
-        /*         {
+        {
           img: `blog03.jpg`,
           date: ` April 10 , 2022 By Admin`,
           title: `last video website you need for`,
@@ -48,7 +48,7 @@ export default {
           date: ` December 07 , 2021 By Admin`,
           title: `cadenze rios picked for the next picture`,
           overview: ` inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do`,
-        }, */
+        },
       ],
       Logos: [
         {
@@ -69,7 +69,27 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    btnRight() {
+      /* this.$refs.containerCards è il container delle carte */
+      const wrapper = this.$refs.containerCards;
+
+      /* this.$refs.singleCard[0] prende la singola carta */
+      const card = this.$refs.singleCard[0];
+
+      /* card.OffsetWidth prende la Width della carta */
+      /*  wrapper.scrollLeft scrolla a destra utilizzando la grandezza della carta */
+      wrapper.scrollLeft += card.offsetWidth;
+    },
+    btnLeft() {
+      const wrapper = this.$refs.containerCards;
+
+      const card = this.$refs.singleCard[0];
+
+      /*  wrapper.scrollLeft scrolla a sinistra -(la grandezza della carta) */
+      wrapper.scrollLeft -= card.offsetWidth;
+    },
+  },
   mounted() {},
 };
 </script>
@@ -81,8 +101,15 @@ export default {
         <h6 class="fw-bold text-uppercase">Latest news</h6>
         <h3 class="fw-bold pb-4 pt-3 text-uppercase">articles updated daily</h3>
       </div>
-      <div class="d-flex gap-3 justify-content-between">
-        <div v-for="singleNews in News" class="structure">
+      <div
+        class="d-flex gap-3 justify-content-between custom-carousel"
+        ref="containerCards"
+      >
+        <div
+          v-for="singleNews in News"
+          class="structure flex-shrink-0"
+          ref="singleCard"
+        >
           <div class="animation">
             <img
               class="latest-news"
@@ -102,10 +129,18 @@ export default {
         </div>
       </div>
       <div class="btn-carousel">
-        <button type="button" class="btn btn-custom rounded-0 ms-3">
+        <button
+          @click="btnLeft()"
+          type="button"
+          class="btn btn-custom rounded-0 ms-3"
+        >
           <i class="fa-solid fa-chevron-left"></i>
         </button>
-        <button type="button" class="btn btn-custom rounded-0 me-3">
+        <button
+          @click="btnRight()"
+          type="button"
+          class="btn btn-custom rounded-0 me-3"
+        >
           <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
@@ -130,6 +165,10 @@ export default {
 }
 .structure img {
   width: 100%;
+}
+.custom-carousel {
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .latest-news {
