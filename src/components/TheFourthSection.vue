@@ -169,6 +169,7 @@ export default {
 .custom-carousel {
   overflow-x: hidden;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .latest-news {
