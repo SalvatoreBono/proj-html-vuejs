@@ -23,8 +23,10 @@ export default {
 </script>
 
 <template>
+  <!-- START CAROUSEL -->
   <div id="carouselExampleFade" class="carousel slide carousel-fade">
     <div class="carousel-inner">
+      <!-- START FOR -->
       <div v-for="SingleCarousel in Carousel" class="carousel-item active">
         <img
           :src="`src/assets/${SingleCarousel.img}`"
@@ -42,6 +44,7 @@ export default {
           </button>
         </div>
       </div>
+      <!-- END FOR -->
     </div>
     <div class="btn-carousel">
       <button
@@ -62,6 +65,7 @@ export default {
       </button>
     </div>
   </div>
+  <!-- END CAROUSEL -->
 </template>
 
 <style lang="scss" scoped>

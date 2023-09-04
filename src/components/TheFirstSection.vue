@@ -37,11 +37,13 @@ export default {
 </script>
 
 <template>
+  <!-- START FIRST SECTION -->
   <section class="pt-5 pb-5">
     <div class="container text-center pt-5">
       <h6 class="fw-bold">PELICULA STUDIO</h6>
       <h3 class="fw-bold pb-5 pt-3">THIS IS WHAT WE DO</h3>
       <div class="row justify-content-between">
+        <!-- START FOR -->
         <div v-for="singlePeliculaStudio in peliculaStudios" class="structure">
           <img :src="`../src/assets/${singlePeliculaStudio.img}`" alt="" />
           <h4 class="fw-bold pt-4 pb-2 text-uppercase">
@@ -52,9 +54,12 @@ export default {
             provident recusandae velit
           </p>
         </div>
+        <!-- END FOR -->
       </div>
     </div>
   </section>
+
+  <!-- START BANNER ABOUT US -->
   <section class="bg-about-us mb-5 d-flex align-items-center">
     <div
       class="container justify-content-center align-items-end d-flex flex-column text-white"
@@ -79,6 +84,7 @@ export default {
       </div>
     </div>
   </section>
+  <!-- END BANNER ABOUT US -->
 </template>
 
 <style lang="scss" scoped>

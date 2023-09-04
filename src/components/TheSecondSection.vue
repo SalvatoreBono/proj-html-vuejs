@@ -48,12 +48,15 @@ export default {
 </script>
 
 <template>
+  <!-- START SECOND SECTION -->
   <section class="container pb-5">
     <div class="text-center pb-4">
       <h6 class="fw-bold">YOUR WATCHLIST</h6>
       <h2 class="fw-bold">BEST HITS MOVIES</h2>
     </div>
     <div class="d-flex flex-wrap text-center gap-3">
+      <!-- START FOR -->
+
       <div v-for="singleWatchlist in Watchlist" class="structure">
         <div class="animation">
           <img :src="`../src/assets/${singleWatchlist.img}`" alt="" />
@@ -63,8 +66,12 @@ export default {
         </h4>
         <p class="text-secondary">{{ singleWatchlist.overview }}</p>
       </div>
+      <!-- END FOR -->
     </div>
   </section>
+  <!-- END SECOND SECTION -->
+
+  <!-- START SECOND BANNER -->
   <section class="pt-5 pb-5">
     <div class="bg-counter d-flex align-items-center">
       <div class="container text-white">
@@ -89,6 +96,7 @@ export default {
       </div>
     </div>
   </section>
+  <!-- END SECOND BANNER -->
 </template>
 
 <style lang="scss" scoped>

@@ -95,6 +95,8 @@ export default {
 </script>
 
 <template>
+  <!-- START FOURTH SECTION -->
+
   <section class="pb-5">
     <div class="container news pt-5 position-relative">
       <div class="text-center">
@@ -105,6 +107,8 @@ export default {
         class="d-flex gap-3 justify-content-between custom-carousel"
         ref="containerCards"
       >
+        <!-- START FOR -->
+
         <div
           v-for="singleNews in News"
           class="structure flex-shrink-0"
@@ -127,6 +131,7 @@ export default {
             {{ singleNews.overview }}
           </p>
         </div>
+        <!-- END FOR -->
       </div>
       <div class="btn-carousel">
         <button
@@ -146,17 +151,24 @@ export default {
       </div>
     </div>
   </section>
+  <!-- END FOURTH SECTION -->
+
+  <!-- START BANNER LOGO -->
+
   <section class="pt-5 pb-5">
     <div class="bg-photo d-flex align-items-center">
       <div class="container text-white">
         <div class="d-flex flex-wrap">
+          <!-- START FOR -->
           <div v-for="SingleLogos in Logos" class="stucture-width-5">
             <img :src="`src/assets/${SingleLogos.img}`" alt="" />
           </div>
+          <!-- END FOR -->
         </div>
       </div>
     </div>
   </section>
+  <!--END BANNER LOGO -->
 </template>
 
 <style lang="scss" scoped>

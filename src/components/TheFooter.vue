@@ -33,12 +33,15 @@ export default {
 </script>
 
 <template>
+  <!-- START FOOTER  -->
+
   <section
     style="padding-top: 70px; background-color: rgb(17, 17, 17)"
     class="text-white"
   >
     <footer class="container pt-5 pb-5">
       <div class="d-flex flex-wrap gap-5">
+        <!-- START LEFT FOOTER  -->
         <div class="stucture-width-4">
           <h5 class="text-uppercase fw-bold pb-3">Contact info</h5>
           <ul class="list-unstyled">
@@ -65,6 +68,10 @@ export default {
             </li>
           </ul>
         </div>
+        <!-- END LEFT FOOTER  -->
+
+        <!-- START MID FOOTER  -->
+        <!-- START FOR  -->
         <div v-for="singleFooter in Footer" class="stucture-width-4">
           <h5 class="text-uppercase fw-bold pb-3">{{ singleFooter.title }}</h5>
           <ul class="list-unstyled">
@@ -75,6 +82,10 @@ export default {
             </li>
           </ul>
         </div>
+        <!--END FOR  -->
+        <!--END MID FOOTER -->
+
+        <!--START RIGHT FOOTER -->
 
         <div class="stucture-width-4">
           <h5 class="text-uppercase fw-bold pb-4">newsletter</h5>
@@ -96,7 +107,11 @@ export default {
             SUBSCRIBE
           </button>
         </div>
+        <!--END RIGHT FOOTER -->
       </div>
+
+      <!--START CREDITS -->
+
       <hr style="margin-top: 150px" />
       <div
         style="color: rgb(102, 102, 102); font-size: 18px"
@@ -104,8 +119,10 @@ export default {
       >
         © 2023 All Rights Reserved. Developed By TemplateMela
       </div>
+      <!--END CREDITS -->
     </footer>
   </section>
+  <!-- END FOOTER  -->
 </template>
 
 <style lang="scss" scoped>

@@ -13,8 +13,10 @@ export default {
 </script>
 
 <template>
+  <!-- START NAVBAR -->
   <nav class="navbar pe-5 bg-white ps-5">
     <div class="container-fluid d-flex">
+      <!-- START LEFT NAVBAR -->
       <div>
         <a class="navbar-brand" href="#">
           <img
@@ -25,6 +27,9 @@ export default {
           />
         </a>
       </div>
+      <!-- END LEFT NAVBAR -->
+
+      <!-- START MID NAVBAR -->
       <div class="d-flex justify-content-center flex-grow-1">
         <ul class="navbar-nav flex-row text-uppercase">
           <li class="nav-item pe-5">
@@ -79,6 +84,9 @@ export default {
           </li>
         </ul>
       </div>
+      <!-- END MID NAVBAR -->
+
+      <!-- START RIGHT NAVBAR -->
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-magnifying-glass fa-xl pe-3"></i>
         <div class="line border-end"></div>
@@ -87,8 +95,12 @@ export default {
         <i class="fa-brands fa-youtube fa-lg"></i>
         <i class="fa-brands fa-instagram fa-lg"></i>
       </div>
+      <!-- END RIGHT NAVBAR -->
     </div>
   </nav>
+  <!-- END NAVBAR -->
+
+  <!-- START CAROUSEL -->
   <TheCarousel></TheCarousel>
 </template>
 

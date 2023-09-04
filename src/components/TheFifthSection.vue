@@ -10,6 +10,8 @@ export default {
 </script>
 
 <template>
+  <!-- START FIFTH SECTION  -->
+
   <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col-6">
@@ -26,6 +28,8 @@ export default {
           Sed feugiat lacus in erat egestas, quis eleifend lacus imperdiet.
         </p>
       </div>
+
+      <!-- START FORM  -->
       <div class="col-6">
         <div class="d-flex gap-4">
           <input
@@ -72,8 +76,10 @@ export default {
           </button>
         </div>
       </div>
+      <!-- END FORM  -->
     </div>
   </div>
+  <!-- END FIFTH SECTION  -->
 </template>
 
 <style lang="scss" scoped>

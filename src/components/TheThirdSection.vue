@@ -44,12 +44,15 @@ export default {
 </script>
 
 <template>
+  <!-- START THIRD SECTION -->
   <section class="container pt-5 pb-5">
     <div class="text-center pb-4">
       <h6 class="fw-bold text-uppercase">the pericuros</h6>
       <h2 class="fw-bold text-uppercase">Meet the team</h2>
     </div>
+
     <div class="d-flex flex-wrap text-center gap-4">
+      <!-- START FOR -->
       <div v-for="SingleTeam in Team" class="stucture-width-4">
         <div class="animation">
           <img :src="`src/assets/${SingleTeam.img}`" alt="" />
@@ -57,8 +60,12 @@ export default {
         <h4 class="fw-bold pt-4 pb-2 text-uppercase">{{ SingleTeam.title }}</h4>
         <p class="text-secondary">{{ SingleTeam.overview }}</p>
       </div>
+      <!-- END FOR -->
     </div>
   </section>
+  <!-- END THIRD SECTION -->
+
+  <!-- START BANNER -->
   <section class="bg-about-us mb-5 d-flex align-items-center">
     <div
       class="container justify-content-center align-items-center text-center d-flex flex-column text-white"
@@ -70,6 +77,8 @@ export default {
           src="../assets/image (20).svg"
           alt=""
         />
+        <!-- START CAROUSEL -->
+
         <div id="carouselExampleCaptions" class="carousel slide">
           <div style="top: 170px" class="carousel-indicators">
             <button
@@ -98,6 +107,8 @@ export default {
             ></button>
           </div>
           <div class="carousel-inner">
+            <!-- START FOR -->
+
             <div
               v-for="singleCarousel in Carousel"
               class="carousel-item active"
@@ -122,11 +133,14 @@ export default {
                 </div>
               </div>
             </div>
+            <!-- END FOR -->
           </div>
         </div>
+        <!-- END CAROUSEL -->
       </div>
     </div>
   </section>
+  <!-- END THIRD SECTION -->
 </template>
 
 <style lang="scss" scoped>
