@@ -79,7 +79,7 @@ export default {
 
       /* card.OffsetWidth prende la Width della carta */
       /*  wrapper.scrollLeft scrolla a destra utilizzando la grandezza della carta */
-      wrapper.scrollLeft += card.offsetWidth;
+      wrapper.scrollLeft += card.offsetWidth + 16;
     },
     btnLeft() {
       const wrapper = this.$refs.containerCards;
