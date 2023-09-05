@@ -3,7 +3,7 @@ export default {
   components: {},
   data() {
     return {
-      Carousel: [
+      carousel: [
         {
           img: `67359-Root-Film-HD-Wallpaper.jpg`,
           smallTitle: `cinemato studio`,
@@ -27,7 +27,7 @@ export default {
   <div id="carouselExampleFade" class="carousel slide carousel-fade">
     <div class="carousel-inner">
       <!-- START FOR -->
-      <div v-for="SingleCarousel in Carousel" class="carousel-item active">
+      <div v-for="SingleCarousel in carousel" class="carousel-item active">
         <img
           :src="`src/assets/${SingleCarousel.img}`"
           class="d-block w-100"

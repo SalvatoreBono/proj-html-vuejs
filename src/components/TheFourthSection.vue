@@ -3,7 +3,7 @@ export default {
   components: {},
   data() {
     return {
-      News: [
+      news: [
         {
           img: `blog07.jpg`,
           date: ` November 06 , 2021 By Admin`,
@@ -50,7 +50,7 @@ export default {
           overview: ` inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do`,
         },
       ],
-      Logos: [
+      logos: [
         {
           img: `03.png`,
         },
@@ -110,7 +110,7 @@ export default {
         <!-- START FOR -->
 
         <div
-          v-for="singleNews in News"
+          v-for="singleNews in news"
           class="structure flex-shrink-0"
           ref="singleCard"
         >
@@ -160,7 +160,7 @@ export default {
       <div class="container text-white">
         <div class="d-flex flex-wrap">
           <!-- START FOR -->
-          <div v-for="SingleLogos in Logos" class="stucture-width-5">
+          <div v-for="SingleLogos in logos" class="stucture-width-5">
             <img :src="`src/assets/${SingleLogos.img}`" alt="" />
           </div>
           <!-- END FOR -->
@@ -207,6 +207,7 @@ export default {
 }
 .bg-photo {
   background-image: url(../assets/Parallax-03.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 250px;
   background-size: cover;

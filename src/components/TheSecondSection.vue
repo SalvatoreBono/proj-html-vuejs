@@ -3,7 +3,7 @@ export default {
   components: {},
   data() {
     return {
-      Watchlist: [
+      watchlist: [
         {
           img: `Gallery-01.jpg`,
           title: `Seventeenth Summer`,
@@ -57,7 +57,7 @@ export default {
     <div class="d-flex flex-wrap text-center gap-3">
       <!-- START FOR -->
 
-      <div v-for="singleWatchlist in Watchlist" class="structure">
+      <div v-for="singleWatchlist in watchlist" class="structure">
         <div class="animation">
           <img :src="`../src/assets/${singleWatchlist.img}`" alt="" />
         </div>
@@ -119,6 +119,7 @@ img {
 }
 .bg-counter {
   background-image: url(../assets/Parallax-01.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 250px;
   background-size: cover;

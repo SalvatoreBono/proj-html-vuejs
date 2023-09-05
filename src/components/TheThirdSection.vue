@@ -3,7 +3,7 @@ export default {
   components: {},
   data() {
     return {
-      Team: [
+      team: [
         {
           img: `Team-01.jpg`,
           title: `Fabricio guerra`,
@@ -25,7 +25,7 @@ export default {
           overview: `Cameraman`,
         },
       ],
-      Carousel: [
+      carousel: [
         {
           img: `01.jpg`,
         },
@@ -53,7 +53,7 @@ export default {
 
     <div class="d-flex flex-wrap text-center gap-4">
       <!-- START FOR -->
-      <div v-for="SingleTeam in Team" class="stucture-width-4">
+      <div v-for="SingleTeam in team" class="stucture-width-4">
         <div class="animation">
           <img :src="`src/assets/${SingleTeam.img}`" alt="" />
         </div>
@@ -110,7 +110,7 @@ export default {
             <!-- START FOR -->
 
             <div
-              v-for="singleCarousel in Carousel"
+              v-for="singleCarousel in carousel"
               class="carousel-item active"
             >
               <p>
@@ -162,6 +162,7 @@ export default {
 }
 .bg-about-us {
   background-image: url(../assets/Parallax-02.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 600px;
   background-size: cover;

@@ -3,7 +3,7 @@ export default {
   components: {},
   data() {
     return {
-      Footer: [
+      footer: [
         {
           title: `information`,
           credits: [
@@ -72,7 +72,7 @@ export default {
 
         <!-- START MID FOOTER  -->
         <!-- START FOR  -->
-        <div v-for="singleFooter in Footer" class="stucture-width-4">
+        <div v-for="singleFooter in footer" class="stucture-width-4">
           <h5 class="text-uppercase fw-bold pb-3">{{ singleFooter.title }}</h5>
           <ul class="list-unstyled">
             <li v-for="singleCredits in singleFooter.credits" class="pb-2">
